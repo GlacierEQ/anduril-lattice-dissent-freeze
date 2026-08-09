@@ -1,0 +1,31 @@
+{
+  "schema": "glaciereq.proof-receipt.v1",
+  "repository": "GlacierEQ/anduril-lattice-dissent-freeze",
+  "source_sha": "21cf7b058708daad6839c31f44139befe004659a4c94c4dba04903fbe52f0a0e",
+  "proof_id": "wave-b-anduril-lattice-dissent-freeze-1786315039",
+  "environment": {
+    "python": "3.9.6",
+    "PYTHONPATH": "."
+  },
+  "tests": [
+    "PYTHONPATH=. python3 -m unittest discover -s tests -v (x2)"
+  ],
+  "adversarial_tests": [
+    "tests/test_adversarial.py"
+  ],
+  "runtime": {
+    "operate": "scripts/operate.py (x2)",
+    "dual_run_ok": true,
+    "proof_dual_run_ok": true
+  },
+  "result": "PASS",
+  "limitations": [
+    "not production deployed",
+    "reference implementation only"
+  ],
+  "timestamp": "2026-08-09T22:37Z",
+  "artifact_hashes": {
+    "operability_receipt": "1b44528dffd2a739b3863b23e4552320cc7a9ef7fe79ec1ded05b8f4365ce724"
+  },
+  "scratch_proof_log": "wave_b/anduril-lattice-dissent-freeze/proof.log"
+}

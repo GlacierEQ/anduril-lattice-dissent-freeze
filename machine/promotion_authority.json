@@ -1,0 +1,10 @@
+{
+  "schema": "glaciereq.promotion-authority-grant.v1",
+  "repository": "GlacierEQ/anduril-lattice-dissent-freeze",
+  "source_sha": "21cf7b058708daad6839c31f44139befe004659a4c94c4dba04903fbe52f0a0e",
+  "proof_receipt_digest": "6fc131e4b7444a2a4e8369af8567530f6e3862b7c26af4b4ee38ea3895e4457f",
+  "not_after": 1786401439.758687,
+  "mac": "bd1b931ccfc2270abb51265f76e057ebb6c50b30d376264cd4255d88a9a86c29",
+  "issuer": "local_operator_promotion_authority",
+  "verified": true
+}
