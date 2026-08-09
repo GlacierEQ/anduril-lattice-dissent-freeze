@@ -1,10 +1,12 @@
 {
   "schema": "glaciereq.promotion-authority-grant.v1",
   "repository": "GlacierEQ/anduril-lattice-dissent-freeze",
-  "source_sha": "21cf7b058708daad6839c31f44139befe004659a4c94c4dba04903fbe52f0a0e",
-  "proof_receipt_digest": "6fc131e4b7444a2a4e8369af8567530f6e3862b7c26af4b4ee38ea3895e4457f",
-  "not_after": 1786401439.758687,
-  "mac": "bd1b931ccfc2270abb51265f76e057ebb6c50b30d376264cd4255d88a9a86c29",
+  "source_sha": "5dc841f8aed23ef8f6d59c068072abfd93818f32b34925153fa49ebc0cc0027d",
+  "proof_receipt_digest": "8ed29642d5a69e57c29d8317aab2cd7e1725d0f8c54c0973a4ae86d4ecfc80ca",
+  "not_after": 1788908261.7824872,
+  "mac": "ead495eee18b80979eb25aa0401662479fe112010a16bd04fe93dcbb70dfd666",
   "issuer": "local_operator_promotion_authority",
-  "verified": true
+  "verified": true,
+  "verification_procedure": "LOCAL reference authority only. Secret constant: src/promotion_authority.py::LOCAL_OPERATOR_SECRET (= b'glaciereq-local-operator-promotion-authority-v1'). Verify: python3 scripts/verify_promotion_grant.py",
+  "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
 }
