@@ -1,0 +1,39 @@
+{
+  "schema": "glaciereq.repo-canonical-position.v1",
+  "repository": "GlacierEQ/anduril-lattice-dissent-freeze",
+  "position_state": "RESOLVED",
+  "role": "company_specific_specialist_system",
+  "company_target": "Anduril",
+  "canonical_identity": "lattice-dissent-freeze",
+  "unique_value": [
+    "high-severity sensor dissent freezes recommendations instead of averaging disagreement away",
+    "per-sensor signatures preserve the evidence behind the fused envelope",
+    "unknown tracks remain UNKNOWN rather than being coerced into friendly certainty"
+  ],
+  "capability_contribution": {
+    "family": "dissent_aware_fusion_authority",
+    "extractable_mechanisms": [
+      "severity-bound recommendation freeze",
+      "signed per-sensor dissent evidence",
+      "fail-closed UNKNOWN track semantics"
+    ],
+    "ownership": "This repository remains the owning Anduril-specialist implementation; extraction does not transfer repository identity or erase lineage."
+  },
+  "integration_policy": {
+    "preserve_repository_identity": true,
+    "preserve_lineage": true,
+    "presentation_independent": true,
+    "size_or_loc_not_dispositive": true,
+    "absorption_requires_functional_equivalence": true,
+    "absorption_requires_proof_equivalence": true
+  },
+  "next_evolution": "Add multi-tier dissent severity, bounded recovery from frozen recommendations, and cross-sensor dissent clustering while preserving fail-closed UNKNOWN semantics.",
+  "evidence_refs": [
+    "ISSUE_CONTRACT.md",
+    "machine/target-contract.json",
+    "machine/proof_receipt.json",
+    "machine/operability_receipt.json",
+    "machine/promotion_authority.json"
+  ],
+  "nonclaims": ["no Anduril affiliation", "not a production Lattice deployment"]
+}
