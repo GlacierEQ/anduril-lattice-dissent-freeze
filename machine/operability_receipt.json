@@ -1,9 +1,8 @@
 {
   "schema": "glaciereq.operability-receipt.v1",
   "repository": "GlacierEQ/anduril-lattice-dissent-freeze",
-  "at": "2026-08-09T22:57Z",
-  "source_sha": "5dc841f8aed23ef8f6d59c068072abfd93818f32b34925153fa49ebc0cc0027d",
-  "source_sha_algorithm": "sha256(newline_join('{rel}:{sha256(bytes)}' for src|scripts|tests .py/.md/.json))",
+  "at": "2026-08-10T04:12Z",
+  "source_sha": "a912024e70bcda36b32fd0449ef01c7f7a37b3706f796d55f046089a2ac11d05",
   "entry": "scripts/operate.py",
   "primary_output": {
     "expected": "FROZEN_DISSENT",
@@ -14,6 +13,5 @@
     "track_id": "T1"
   },
   "dual_run_ok": true,
-  "result": "PASS",
-  "scratch_launch_log": "wave_b/anduril-lattice-dissent-freeze/launch.log"
+  "result": "PASS"
 }

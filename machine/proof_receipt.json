@@ -1,21 +1,18 @@
 {
   "schema": "glaciereq.proof-receipt.v1",
   "repository": "GlacierEQ/anduril-lattice-dissent-freeze",
-  "source_sha": "5dc841f8aed23ef8f6d59c068072abfd93818f32b34925153fa49ebc0cc0027d",
-  "source_sha_algorithm": "sha256(newline_join('{rel}:{sha256(bytes)}' for src|scripts|tests .py/.md/.json))",
-  "proof_id": "wave-b-fix-anduril-lattice-dissent-freeze-1786316261",
+  "source_sha": "a912024e70bcda36b32fd0449ef01c7f7a37b3706f796d55f046089a2ac11d05",
+  "proof_id": "elite-anduril-lattice-dissent-freeze-1786335149",
   "environment": {
-    "python": "3.9.6",
-    "PYTHONPATH": "."
+    "python": "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python",
+    "PYTHONPATH": "/Users/kcbflux/job-app/repos/anduril-lattice-dissent-freeze:/Users/kcbflux/job-app/repos/anduril-lattice-dissent-freeze/src",
+    "entry": "unittest"
   },
   "tests": [
-    "PYTHONPATH=. python3 -m unittest discover -s tests -v (x2)"
+    "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python -m unittest discover -s tests -v (x2)"
   ],
   "adversarial_tests": [
     "tests/test_adversarial.py"
-  ],
-  "authority_tests": [
-    "tests/test_promotion_authority.py::test_real_machine_grant_verifies_against_proof_receipt"
   ],
   "runtime": {
     "operate": "scripts/operate.py (x2)",
@@ -27,9 +24,8 @@
     "not production deployed",
     "reference implementation only"
   ],
-  "timestamp": "2026-08-09T22:57Z",
+  "timestamp": "2026-08-10T04:12Z",
   "artifact_hashes": {
-    "operability_receipt": "32c20bbf3471d9aa786c307b60036f302a7f5f2fe27f85f4c2156c1c1b85a682"
-  },
-  "scratch_proof_log": "wave_b/anduril-lattice-dissent-freeze/proof.log"
+    "operability_receipt": "4a878ceeedcb6a0538c1897b7ff7c7523d5669c13962c25a8961fa7f61ddab96"
+  }
 }
