@@ -1,0 +1,31 @@
+{
+  "schema": "glaciereq.repo-evolution-receipt.v1",
+  "repository": "GlacierEQ/anduril-lattice-dissent-freeze",
+  "consumed_cursor": "next:multi_tier_dissent_recovery_and_cross_sensor_clustering",
+  "candidate_source_sha": "fccbf6570728716e607c5ce0ab8768bb5f3f34cf",
+  "workflow_run": 31452722206,
+  "proof": {
+    "python": "PASS",
+    "go": "PASS"
+  },
+  "implemented": [
+    "cross-sensor dissent clusters grouped deterministically by alternate track label",
+    "explicit NONE/LOW/MEDIUM/HIGH/CRITICAL dissent tiers",
+    "MEDIUM dissent escalates to review while HIGH+ retains fail-closed freeze semantics",
+    "majority and freeze selection are deterministic across concurrent producer completion order",
+    "bounded frozen-state recovery requires stable non-freezing evidence and can only recover to review",
+    "duplicate sensor identities are rejected in Python agreement envelopes",
+    "Python and Go regression suites cover clustering, tiering, deterministic ties, freeze selection, and bounded recovery"
+  ],
+  "preserved_invariants": [
+    "HIGH and CRITICAL dissent cannot be averaged away",
+    "a frozen recommendation never automatically returns directly to CONTINUE_OBSERVE",
+    "UNKNOWN majority evidence remains review-bound",
+    "repository identity and lineage remain independent"
+  ],
+  "truth_boundaries": [
+    "SensorOpinion.signature is bound into the Python envelope fingerprint but signature authenticity is not verified by this mechanism yet.",
+    "No Anduril affiliation, production Lattice deployment, or external sensor-authority integration is claimed."
+  ],
+  "next_cursor": "next:signature_verified_sensor_identity_cluster_persistence_and_recovery_receipt_chain"
+}
