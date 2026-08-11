@@ -2,21 +2,51 @@
   "schema": "glaciereq.repo-target-contract.v1",
   "identity": {
     "repository_id": "GlacierEQ/anduril-lattice-dissent-freeze",
-    "family": "elite-estate"
+    "family": "elite-estate",
+    "canonical_identity": "lattice-dissent-freeze"
   },
   "current": {
-    "state": "PROMOTED",
+    "state": "EVOLVING",
     "implemented": true,
     "tested": true,
-    "deployed": false
+    "deployed": false,
+    "completed_evolution": {
+      "cursor": "next:multi_tier_dissent_recovery_and_cross_sensor_clustering",
+      "candidate_source_sha": "fccbf6570728716e607c5ce0ab8768bb5f3f34cf",
+      "workflow_run": 31452722206,
+      "python": "PASS",
+      "go": "PASS"
+    }
   },
+  "target": {
+    "purpose": "Preserve material multi-sensor disagreement as explicit authority-bounding evidence rather than averaging it away.",
+    "current_mechanisms": [
+      "deterministic alternate-label dissent clusters",
+      "explicit NONE/LOW/MEDIUM/HIGH/CRITICAL dissent tiers",
+      "MEDIUM review escalation and HIGH+ fail-closed freeze",
+      "bounded stable-window recovery that only releases a prior freeze into review",
+      "deterministic majority and freeze selection across concurrent sensor arrival"
+    ],
+    "next_cursor": "next:signature_verified_sensor_identity_cluster_persistence_and_recovery_receipt_chain",
+    "next_bottleneck": "Sensor signatures are currently evidence fields bound into fingerprints, not authenticated identities; cluster and recovery lineage also needs durable receipt chaining."
+  },
+  "invariants": [
+    "HIGH and CRITICAL dissent cannot be averaged away",
+    "a frozen state cannot auto-recover directly to normal observation",
+    "UNKNOWN evidence remains review-bound",
+    "evolution preserves repository identity and lineage"
+  ],
   "nonclaims": [
     "no employer affiliation",
-    "no production deployment without receipt"
+    "no production deployment without receipt",
+    "no Anduril affiliation or production Lattice deployment",
+    "no cryptographic verification of SensorOpinion.signature yet"
   ],
   "donor_plan": {
     "mode": "none",
-    "donors": []
+    "donors": [],
+    "strategy": "INDEPENDENT_MECHANISM_PRESERVED"
   },
-  "frozen_at": "2026-08-10T04:12Z"
+  "evolution_receipt": "machine/evolution-receipts/2026-08-11-multi-tier-dissent-recovery.json",
+  "frozen_at": "2026-08-11T02:36:00Z"
 }
