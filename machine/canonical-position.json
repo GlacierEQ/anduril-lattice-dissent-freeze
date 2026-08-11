@@ -6,15 +6,18 @@
   "company_target": "Anduril",
   "canonical_identity": "lattice-dissent-freeze",
   "unique_value": [
-    "high-severity sensor dissent freezes recommendations instead of averaging disagreement away",
-    "per-sensor signatures preserve the evidence behind the fused envelope",
-    "unknown tracks remain UNKNOWN rather than being coerced into friendly certainty"
+    "HIGH and CRITICAL sensor dissent freezes recommendations instead of averaging disagreement away",
+    "cross-sensor dissent is retained as deterministic alternate-label clusters with an explicit severity tier",
+    "bounded recovery from a prior freeze can only release into review after a stable non-freezing window",
+    "unknown tracks remain UNKNOWN/review-bound rather than being coerced into friendly certainty"
   ],
   "capability_contribution": {
     "family": "dissent_aware_fusion_authority",
     "extractable_mechanisms": [
-      "severity-bound recommendation freeze",
-      "signed per-sensor dissent evidence",
+      "severity-tiered recommendation freeze and escalation",
+      "deterministic cross-sensor dissent clustering",
+      "bounded frozen-state recovery to review",
+      "stable concurrent majority and freeze selection",
       "fail-closed UNKNOWN track semantics"
     ],
     "ownership": "This repository remains the owning Anduril-specialist implementation; extraction does not transfer repository identity or erase lineage."
@@ -27,13 +30,27 @@
     "absorption_requires_functional_equivalence": true,
     "absorption_requires_proof_equivalence": true
   },
-  "next_evolution": "Add multi-tier dissent severity, bounded recovery from frozen recommendations, and cross-sensor dissent clustering while preserving fail-closed UNKNOWN semantics.",
+  "completed_evolution": {
+    "cursor": "next:multi_tier_dissent_recovery_and_cross_sensor_clustering",
+    "receipt": "machine/evolution-receipts/2026-08-11-multi-tier-dissent-recovery.json",
+    "candidate_source_sha": "fccbf6570728716e607c5ce0ab8768bb5f3f34cf",
+    "workflow_run": 31452722206,
+    "python": "PASS",
+    "go": "PASS"
+  },
+  "next_evolution": "Verify sensor identity/signatures cryptographically, persist dissent-cluster lineage, and chain recovery decisions to durable receipts without weakening fail-closed freeze semantics.",
+  "next_evolution_cursor": "next:signature_verified_sensor_identity_cluster_persistence_and_recovery_receipt_chain",
   "evidence_refs": [
     "ISSUE_CONTRACT.md",
     "machine/target-contract.json",
     "machine/proof_receipt.json",
     "machine/operability_receipt.json",
-    "machine/promotion_authority.json"
+    "machine/promotion_authority.json",
+    "machine/evolution-receipts/2026-08-11-multi-tier-dissent-recovery.json"
   ],
-  "nonclaims": ["no Anduril affiliation", "not a production Lattice deployment"]
+  "nonclaims": [
+    "no Anduril affiliation",
+    "not a production Lattice deployment",
+    "SensorOpinion.signature is fingerprint-bound evidence only; signature authenticity is not yet verified by this mechanism"
+  ]
 }
